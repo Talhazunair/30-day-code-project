@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container mt-5 text-center">
+  <h1 class="display-4 text-white">Thank You!</h1>
+  <p class="lead text-white">Your information has been submitted successfully.</p>
+  <hr>
+  <p class="small text-white">We will be in touch with you shortly.</p>
+  <a href="{% url 'home' %}" class="btn btn-primary btn-sm">Return to Home</a>
+</div>
+{% endblock %}

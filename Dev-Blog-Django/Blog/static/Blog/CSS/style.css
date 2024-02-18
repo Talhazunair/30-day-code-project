@@ -1,0 +1,39 @@
+.social-icons
+{
+    font-size: 3.5vh;
+}
+.container
+{
+    background-color:#031114;
+    max-width: 100%;
+}
+.blogtitle h1
+{
+    text-align: center;
+}
+.blogposts ul li
+{
+    list-style: none;
+}
+.blogposts img
+{
+    width: auto;
+    height: 200px;
+}
+.container-two
+{
+    padding-left: 7vh;
+}
+/* .main-container
+{
+    background-image: url("../Images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+@media (max-width: 768px) 
+{
+    .container-two
+    {
+        padding-left: 3.5vh;
+    }
+}

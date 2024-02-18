@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<section>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card mb-4">
+                <div class="card-body text-center">
+                    <img src="{% static 'Blog/Images/talhaabout.jpg' %}" alt="avatar"
+                        class="rounded-circle img-fluid" style="width:150px; height:170px">
+                    <h5 class="my-3">Talha Zunair</h5>
+                    <p class="text-muted mb-1">Software Engineer</p>
+                    <p class="text-muted mb-1">Full Stack Developer</p>
+                    <p class="text-muted mb-4">Jaranwala, Punjab, Pakistan</p>
+                    <div class="d-flex justify-content-center mb-2">
+                        <a href="https://www.linkedin.com/in/talhazunair/">
+                            <button type="button" class="btn btn-primary">LinkedIn</button>
+                        </a>
+                        <a href="{% url 'contact' %}">
+                            <button type="button" class="btn btn-outline-primary ms-1">Message</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-4 mb-lg-0">
+                <div class="card-body p-0">
+                    <ul class="list-group list-group-flush rounded-3">
+                        <!-- <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                            <i class="fas fa-globe fa-lg text-warning"></i>
+                            <p class="mb-0">https://mdbootstrap.com</p>
+                        </li> -->
+                        <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                            <i class="fab fa-github fa-lg" style="color: #333333;"></i>
+                            <p class="mb-0"><a href="https://github.com/Talhazunair">Talhazunair</a></p>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                            <i class="fab fa-twitter fa-lg" style="color: #55acee;"></i>
+                            <p class="mb-0"><a href="https://twitter.com/TalhaZunair2">TalhaZunair2</a></p>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                            <i class="fab fa-instagram fa-lg" style="color: #ac2bac;"></i>
+                            <p class="mb-0"><a href="https://www.instagram.com/talhazunair479/">Talhazunair479</a></p>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                            <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
+                            <p class="mb-0"><a href="https://www.facebook.com/profile.php?id=100006935612808">Talhazunair</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <p class="mb-0">Full Name</p>
+                        </div>
+                        <div class="col-sm-9">
+                            <p class="text-muted mb-0">Talha Zunair</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <p class="mb-0">Email</p>
+                        </div>
+                        <div class="col-sm-9">
+                            <p class="text-muted mb-0">talhazunair37@gmail.com</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <p class="mb-0">Mobile</p>
+                        </div>
+                        <div class="col-sm-9">
+                            <p class="text-muted mb-0">(+92) 3007843812</p>
+                        </div>
+                    </div>
+                    <hr>
+                    </hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <p class="mb-0">Address</p>
+                        </div>
+                        <div class="col-sm-9">
+                            <p class="text-muted mb-0">Jaranwala, Punjab, Pakistan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4 mb-md-0">
+                        <div class="card-body">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action active">
+                                    Skill
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">C++</a>
+                                <a href="#" class="list-group-item list-group-item-action">Python</a>
+                                <a href="#" class="list-group-item list-group-item-action">JavaScript</a>
+                                <a href="#" class="list-group-item list-group-item-action disabled">C#</a>
+                                <a href="#" class="list-group-item list-group-item-action disabled">Linux</a>
+                                <a href="#" class="list-group-item list-group-item-action disabled">TailwindCSS</a>
+                                <a href="#" class="list-group-item list-group-item-action disabled">CSS</a>
+                                <a href="#" class="list-group-item list-group-item-action disabled">MYSQL</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4 mb-md-0">
+                        <div class="card-body">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action active">
+                                    Tool & Technologies
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">VSCode</a>
+                                <a href="#" class="list-group-item list-group-item-action">PyCharm</a>
+                                <a href="#" class="list-group-item list-group-item-action">Ubuntu</a>
+                                <a href="#" class="list-group-item list-group-item-action disabled">Visual Studio IDE</a>
+                                <a href="#" class="list-group-item list-group-item-action disabled">Github</a>
+                                <a href="#" class="list-group-item list-group-item-action disabled">Figma</a>
+                                <a href="#" class="list-group-item list-group-item-action disabled">WSL</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+    </div>
+    </div>
+</section>
+{% endblock %}
