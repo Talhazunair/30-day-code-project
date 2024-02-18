@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+Add-Notes
+{% endblock %}
+{% block content %}
+    <form action="{% url 'Add-Notes' %}" method="POST" class="p-6 pt-1 rounded-md shadow-md max-w-screen-lg mx-auto my-auto">
+        {% csrf_token %}
+        <div class="text-2xl font-bold">{{ form.title.label_tag }}</div>
+        <div>{{ form.title }}</div>
+        {{ form.title.errors }}
+        <br>
+        <div class="text-3xl font-bold">{{ form.content.label_tag }}</div>
+        {{ form.content }}
+        {{ form.content.errors }}
+    
+        <button type="submit" class="btn-submit bg-blue-500 text-white px-4 py-2 rounded-md mt-4">Save</button>
+    </form>
+    
+    <script src="{% static 'django_summernote/summernote-bs4.min.js' %}" class="note-editor"></script>
+    <script>
+         $(document).ready(function () {
+        $('#id_content').summernote();
+    });
+    </script>
+{% endblock %}
+</body>
+</html>

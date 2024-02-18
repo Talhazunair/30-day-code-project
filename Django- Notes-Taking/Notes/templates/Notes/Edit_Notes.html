@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}
+Edit Note
+{% endblock %}
+{% block content %}
+    <h1 class="p-3 text-white font-bold">Edit Note - {{ note.title }}</h1>
+    <form action="{% url 'edit-note' note.id %}" method="POST" class="-top-4 rounded-md shadow-md max-w-screen-lg mx-auto my-auto ">
+        {% csrf_token %}
+        <div class="text-2xl font-bold text-white">{{ form.title.label_tag }}</div>
+        <div>{{ form.title }}</div>
+        {{ form.title.errors }}
+        <br>
+        <div class="text-3xl font-bold text-white">{{ form.content.label_tag }}</div>
+        {{ form.content }}
+        {{ form.content.errors }}
+    
+        <button type="submit" class="btn-submit bg-blue-500 text-white px-4 py-2 rounded-md mt-4">Save</button>
+    </form>
+{% endblock %}

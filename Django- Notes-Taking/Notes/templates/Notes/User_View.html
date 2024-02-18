@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+User_View
+{% endblock %}
+{% block content %}
+    <div class="p-10">
+        <input type="text" placeholder="Search Note" class=" bg-blue-900 text-white h-9 w-[40vh] rounded-md">
+    </div>
+    <ul class="flex flex-row space-x-20 text-white text-[2.5vh] pl-10">
+        <li><a href="" class="hover:underline">Notes</a></li>
+        <li><a href="List" class="hover:underline">Lists</a></li>
+        <li><a href="" class="hover:underline">Recordings</a></li>
+    </ul>
+    <div>
+        <h1 class="pl-10 pt-4 text-2xl font-bold text-white">Hey WellCome {{ user.username }}</h1>
+        <h1 class="pl-10 pt-5 text-3xl font-bold text-white">All Notes</h1>
+        <ul class="pl-10 pt-7 flex flex-wrap gap-10">
+            {% for note in notes %}
+                <li class="flex-none w-[40vh] h-40">
+                        <a href="{% url 'View-Notes' note.id %}" class="h-[20vh] w-full">
+                            <div class="h-full bg-gray-500 rounded-xl p-4">
+                                <p class="text-white text-center text-3xl">{{ note.title }}</p>
+                            </div>
+                        </a>
+                        <div class="flex justify-center p-1">
+                            <a href="{% url 'edit-note' note.id %}">
+                                <button class="bg-blue-600 text-white h-7 w-10 rounded-lg">EDIT</button>
+                            </a>
+                            &nbsp &nbsp
+                            <a href="{% url 'delete-note' note.id %}">
+                                <button class="bg-red-700 text-white h-7 w-14 rounded-lg">DELETE</button>
+                            </a>
+                        </div>
+                </li>
+            {% endfor %}
+            <li class="flex-none w-[40vh]">
+                <a href="{% url 'Add-Notes'%}" class="h-[30vh] w-[30vh]">
+                    <div class="h-full w-[20vh] rounded-xl p-4">
+                        <img src="{% static "Notes/Images/add-notes.png" %}" alt="" width="120" class="">
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+{% endblock %}

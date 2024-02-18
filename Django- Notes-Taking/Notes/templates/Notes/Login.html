@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+EverNoteHub | Login
+{% endblock %}
+{% block content %}
+<div class="flex justify-center pt-10">
+    <img src="{% static 'Notes/Images/Login.svg' %}" alt="" width="350" class="p-3">
+</div>
+<br>
+<div>
+    <h1 class="text-start pl-11 text-white text-4xl font-bold md:absolute md:left-[78vh] md:top-[48vh]">Login</h1>
+</div>
+<br>
+<div class="flex justify-center">
+    <form action="EverNoteHub-Login" method='POST'>
+        {% csrf_token %}
+        <input type="text" required placeholder="Enter Username Here" name="username" class="h-9 w-[35vh] border-none rounded-lg">
+        <br><br>
+        <input type="password" required placeholder="Enter Password Here" name="password" class="h-9 w-[35vh] border-none rounded-lg">
+        <br><br>
+        <button class="bg-[#31a6f6] w-28 h-[4vh] font-bold text-white border-#31a6f6 rounded-md" type="submit" value="login">Login</button>
+        <a href="{% url 'signup' %}">
+            <button class=" text-white  bg-[#2c0635] w-28 h-[4vh] rounded-md font-bold" type="button">Signup</button>
+        </a>
+        <br>
+        <label for="" class="text-red-600 font-bold">{{ credential_error }}</label>
+        <br>
+        <a href="" class="text-white pt-2 underline">Forget Password</a>
+    </form>
+</div>
+
+{% endblock %}

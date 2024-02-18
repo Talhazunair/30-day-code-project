@@ -1,0 +1,15 @@
+form
+{
+    background-color: transparent;
+    backdrop-filter:blur(10px);
+}
+label
+{
+    color: white;
+}
+input
+{
+    width: 109vh;
+    border-radius: 10px;
+    outline: none;
+}

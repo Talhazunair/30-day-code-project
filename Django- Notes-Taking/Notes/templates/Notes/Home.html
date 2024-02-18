@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+EverNoteHub | Homepage
+{% endblock %}
+{% block content %}
+<div class="flex-grow flex justify-center items-center">
+    <h1 class="absolute top-[10vh] text-6xl font-bold text-white md:left-10 md:pt-[10vh] md:text-8xl">Digital</h1>
+    <h2 class="absolute top-[20vh] text-4xl font-extrabold text-[#c00787] md:left-10 md:pt-[17vh] md:text-5xl">Note-Taking</h2>
+    <img src="{% static "Notes/Images/undraw_undraw_notebook_ask4_duaf.svg" %}" class="absolute top-[50vh] md:top-[17.5vh] md:w-[80vh] md:right-[20vh] " alt="">
+    <p class="p-5 text-justify absolute top-[23vh] text-white md:w-[100vh] md:left-[4vh] md:pt-36 md:text-2xl">EverNoteHub is more than just a notes-taking tool; it's your digital companion for capturing thoughts, ideas, and important information on the fly. Whether you're a student, professional, or anyone who loves jotting down notes, our intuitive interface and powerful features make the process a breeze</p>
+    <div class="absolute top-[45.5vh] space-x-4 md:right-[161vh] md:top-[75vh]">
+        <a href="{% url 'login-page' %}"><button class="bg-[#31a6f6] w-28 h-[4vh] font-bold text-white border-#31a6f6 rounded-md">Login</button></a>
+        
+        <button class="bg-[#131021] w-28 h-[4vh] font-bold  text-white border-2 border-[#a63289] rounded-md">Email</button>
+    </div>
+</div>
+{% endblock %}

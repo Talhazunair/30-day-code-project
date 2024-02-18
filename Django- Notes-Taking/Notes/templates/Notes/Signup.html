@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+EverNoteHub | Signup
+{% endblock %}
+{% block content %}
+<div class="flex justify-center pt-8">
+    <img src={% static "Notes/Images/sign-up.png" %} width="160" alt="">
+</div>
+<div class="pt-6">
+    <h1 class="text-white pl-12 text-3xl font-bold md:pl-[86.1vh]">Create Account</h1>
+</div>
+<div class="flex justify-center">
+    <form action="EverNoteHub-Signup" method="POST">
+        {% csrf_token %}
+        <input type="text" required placeholder="Enter Username" name="username" class="w-[35vh] h-9 rounded-md">
+        <br><br>
+        <input type="email" required placeholder="Enter Email" name="email" class="w-[35vh] h-9 rounded-md">
+        <br><br>
+        <input type="password" required placeholder="Enter Password" name="password" class="w-[35vh] h-9 rounded-md">
+        <br><br>
+        <input type="password" required placeholder="Enter Confirm Password" name="confirmpassword" class="w-[35vh] h-9 rounded-md">
+        <br><br>
+        <input type="checkbox">
+        <label for="" class="text-white">Agree & Continue</label>
+        <p class="text-red-600 ">{{ password_not_match }}</p>
+        <br><br>
+        <button type="submit" value="submit" class="absolute md:bottom-7 bg-[#31a6f6] w-40 h-[4vh] font-bold text-white border-#31a6f6 rounded-md">Create Account</button>
+    </form>
+</div>
+{% endblock %}
