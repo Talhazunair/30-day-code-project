@@ -30,6 +30,7 @@ This is a simple calculator project implemented in Python using the tkinter libr
 - Use the "Clear" button to clear the input field.
 
 ## Developer
-- [Your Name/Contact Information]
+- Talha Zunair
+- linkedin.com/in/talhazunair/
 
 Feel free to contribute to this project by submitting pull requests or reporting issues. Thank you for using CalcMaster!
